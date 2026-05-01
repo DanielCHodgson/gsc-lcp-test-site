@@ -1,21 +1,18 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title>About | Search Console Demo</title>
-
     <meta
       name="description"
-      content="About this Search Console test site used for generating analytics data."
+      content="About this Google Search Console demo site for testing search analytics, page indexing, and SquaredUp plugin data streams."
     />
-
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
   <body>
-    <div class="container">
+    <div class="container page">
       <nav>
         <a href="./index.html">Home</a>
         <a href="./about.html">About</a>
@@ -24,14 +21,44 @@
         <a href="./contact.html">Contact</a>
       </nav>
 
-      <div class="card">
-        <h1>About this site</h1>
-
+      <section class="card">
+        <p class="eyebrow">About the project</p>
+        <h1>About this Search Console test site</h1>
         <p>
-          This site exists to provide structured indexing signals inside Google
-          Search Console for API testing and dashboard integrations.
+          This lightweight website is used to generate Google Search Console
+          data for testing search analytics, indexing coverage, page
+          performance, and API integrations.
         </p>
-      </div>
+      </section>
+
+      <section class="card">
+        <h2>Why this site exists</h2>
+        <p>
+          The site provides a simple public property that can be verified in
+          Google Search Console. Once Google crawls and indexes the pages, the
+          data can be queried through the Search Console API and shaped into
+          SquaredUp Web API data streams.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Useful test signals</h2>
+        <ul>
+          <li>Search impressions by page</li>
+          <li>Search query performance</li>
+          <li>Click-through rate testing</li>
+          <li>Average position reporting</li>
+          <li>Indexed page coverage</li>
+        </ul>
+      </section>
+
+      <section class="card link-card">
+        <h2>Next pages</h2>
+        <p>
+          Read the <a href="./guides.html">Search Console testing guides</a> or
+          view the <a href="./docs.html">API documentation examples</a>.
+        </p>
+      </section>
     </div>
   </body>
 </html>

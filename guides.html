@@ -1,21 +1,18 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title>Guides | Search Console Demo</title>
-
     <meta
       name="description"
-      content="Example guide pages used for testing page-level metrics in Google Search Console."
+      content="Guides for testing Google Search Console metrics including queries, pages, impressions, CTR, and indexing data."
     />
-
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
   <body>
-    <div class="container">
+    <div class="container page">
       <nav>
         <a href="./index.html">Home</a>
         <a href="./about.html">About</a>
@@ -24,14 +21,45 @@
         <a href="./contact.html">Contact</a>
       </nav>
 
-      <div class="card">
-        <h1>Guides</h1>
-
+      <section class="card">
+        <p class="eyebrow">Testing guides</p>
+        <h1>Google Search Console testing guides</h1>
         <p>
-          Example guide pages improve indexing coverage and help generate
-          query-level Search Console metrics.
+          These example guides help create page-level content that Google can
+          crawl, index, and report on inside Search Console.
         </p>
-      </div>
+      </section>
+
+      <section class="grid two">
+        <article class="card">
+          <h2>Guide: Search analytics metrics</h2>
+          <p>
+            Search Console reports clicks, impressions, CTR, and average
+            position. These metrics are useful for creating SquaredUp dashboards
+            that show how content performs in Google Search.
+          </p>
+          <a href="./docs.html">View API docs</a>
+        </article>
+
+        <article class="card">
+          <h2>Guide: Page-level reporting</h2>
+          <p>
+            Using the page dimension makes it possible to compare the homepage,
+            docs page, guides pagze, and contact page as separate URLs in a data
+            stream.
+          </p>
+          <a href="./about.html">Learn about the test site</a>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2>Example keywords this site can test</h2>
+        <p>
+          Google Search Console API example, SquaredUp Web API plugin example,
+          search analytics dashboard, page indexing test, and search performance
+          metrics.
+        </p>
+      </section>
     </div>
   </body>
 </html>

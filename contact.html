@@ -1,21 +1,18 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title>Contact | Search Console Demo</title>
-
     <meta
       name="description"
-      content="Contact page example used for indexing and coverage testing in Search Console."
+      content="Contact page for the Google Search Console demo site used for indexing and search performance testing."
     />
-
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
   <body>
-    <div class="container">
+    <div class="container page">
       <nav>
         <a href="./index.html">Home</a>
         <a href="./about.html">About</a>
@@ -24,14 +21,33 @@
         <a href="./contact.html">Contact</a>
       </nav>
 
-      <div class="card">
-        <h1>Contact</h1>
-
+      <section class="card">
+        <p class="eyebrow">Contact</p>
+        <h1>Contact and testing notes</h1>
         <p>
-          This page exists to create an additional indexable URL for Search
-          Console coverage and API testing.
+          This page exists as another crawlable URL for testing Google Search
+          Console coverage, page indexing, and page-level search analytics.
         </p>
-      </div>
+      </section>
+
+      <section class="card">
+        <h2>Testing purpose</h2>
+        <p>
+          Contact-style pages often behave differently from documentation or
+          guide pages in search results. Keeping this page in the sitemap helps
+          test how different content types appear in Search Console API
+          responses.
+        </p>
+      </section>
+
+      <section class="card link-card">
+        <h2>Explore the site</h2>
+        <p>
+          Visit the <a href="./docs.html">documentation examples</a>, read the
+          <a href="./guides.html">testing guides</a>, or return to the
+          <a href="./index.html">homepage</a>.
+        </p>
+      </section>
     </div>
   </body>
 </html>

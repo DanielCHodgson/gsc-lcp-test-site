@@ -1,21 +1,18 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title>Docs | Search Console Demo</title>
-
     <meta
       name="description"
-      content="Documentation-style page for testing Search Console page performance metrics."
+      content="Documentation examples for querying Google Search Console API data and shaping search metrics for SquaredUp dashboards."
     />
-
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
   <body>
-    <div class="container">
+    <div class="container page">
       <nav>
         <a href="./index.html">Home</a>
         <a href="./about.html">About</a>
@@ -24,14 +21,55 @@
         <a href="./contact.html">Contact</a>
       </nav>
 
-      <div class="card">
-        <h1>Documentation</h1>
-
+      <section class="card">
+        <p class="eyebrow">Documentation</p>
+        <h1>Search Console API documentation examples</h1>
         <p>
-          Documentation pages are useful for testing how Search Console groups
-          impressions and queries across structured content.
+          This page describes example data streams that could be created from
+          the Google Search Console Search Analytics API.
         </p>
-      </div>
+      </section>
+
+      <section class="card">
+        <h2>Example data streams</h2>
+        <ul>
+          <li>
+            <strong>Top queries</strong> — query, clicks, impressions, CTR,
+            position
+          </li>
+          <li>
+            <strong>Top pages</strong> — page URL, clicks, impressions, CTR,
+            position
+          </li>
+          <li>
+            <strong>Performance over time</strong> — date, clicks, impressions
+          </li>
+          <li>
+            <strong>Device breakdown</strong> — device, clicks, impressions, CTR
+          </li>
+          <li>
+            <strong>Country breakdown</strong> — country, clicks, impressions,
+            position
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Example API dimensions</h2>
+        <p>
+          Useful Search Console dimensions include date, query, page, country,
+          device, and search appearance. These dimensions can be combined to
+          build dashboard tiles for organic search monitoring.
+        </p>
+      </section>
+
+      <section class="card link-card">
+        <h2>Related pages</h2>
+        <p>
+          See the <a href="./guides.html">guides page</a> for example use cases,
+          or return to the <a href="./index.html">homepage</a>.
+        </p>
+      </section>
     </div>
   </body>
 </html>
