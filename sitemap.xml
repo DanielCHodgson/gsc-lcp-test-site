@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://danielchodgson.github.io/gsc-lcp-test-site/</loc>
+    </url>
+
+    <url>
+        <loc>https://danielchodgson.github.io/gsc-lcp-test-site/about.html</loc>
+    </url>
+
+    <url>
+        <loc>https://danielchodgson.github.io/gsc-lcp-test-site/guides.html</loc>
+    </url>
+
+    <url>
+        <loc>https://danielchodgson.github.io/gsc-lcp-test-site/docs.html</loc>
+    </url>
+
+    <url>
+        <loc>https://danielchodgson.github.io/gsc-lcp-test-site/contact.html</loc>
+    </url>
+
+</urlset>
