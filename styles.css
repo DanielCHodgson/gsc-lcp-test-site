@@ -31,32 +31,77 @@ body {
   background: var(--bg);
 }
 
-.hero {
-  min-height: 72vh;
-  padding: 24px;
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(54, 92, 255, 0.22),
-      transparent 34rem
-    ),
-    linear-gradient(135deg, #ffffff, #eef2ff);
-  border-bottom: 1px solid var(--border);
-}
+/* ===============================
+   NAVIGATION (shared across pages)
+================================ */
 
 nav {
   display: flex;
-  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  width: fit-content;
+  max-width: calc(100% - 48px);
+
+  margin: 28px auto 36px;
+  padding: 8px;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 8px 24px rgba(23, 32, 51, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
   font-weight: 600;
 }
 
 nav a {
-  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+
   color: var(--accent);
+  font-size: 0.95rem;
+  text-decoration: none;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    transform 0.12s ease,
+    box-shadow 0.12s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background: #eef2ff;
+  color: var(--accent-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(54, 92, 255, 0.16);
+}
+
+nav a:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ===============================
+   HOMEPAGE
+================================ */
+
+.hero {
+  min-height: 72vh;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(54, 92, 255, 0.22), transparent 34rem),
+    linear-gradient(135deg, #ffffff, #eef2ff);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero nav {
+  margin-top: 0;
 }
 
 .hero-content {
@@ -105,6 +150,10 @@ h1 {
   background: var(--accent-dark);
 }
 
+/* ===============================
+   GENERAL CONTENT
+================================ */
+
 .content {
   max-width: 1100px;
   margin: 0 auto;
@@ -118,12 +167,20 @@ h1 {
   margin-top: 18px;
 }
 
+/* FIXED: prevents guides page overlap */
+
+.grid.two,
+.two {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
 .card {
   padding: 28px;
   border: 1px solid var(--border);
   border-radius: 28px;
   background: var(--card);
   box-shadow: var(--shadow);
+  min-width: 0;
 }
 
 .card h2 {
@@ -137,6 +194,12 @@ h1 {
   line-height: 1.7;
 }
 
+.card a {
+  color: var(--accent);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
 .footer {
   max-width: 1100px;
   margin: 0 auto;
@@ -144,7 +207,92 @@ h1 {
   color: var(--muted);
 }
 
+/* ===============================
+   SUBPAGES
+================================ */
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 24px 64px;
+}
+
+.page nav {
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+
+.page > .card:first-of-type {
+  text-align: center;
+  padding: 44px;
+  background:
+    radial-gradient(circle at top right, rgba(54, 92, 255, 0.12), transparent 26rem),
+    linear-gradient(135deg, #ffffff, #f4f6ff);
+}
+
+.page > .card:first-of-type h1 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.page > .card:first-of-type p:not(.eyebrow) {
+  max-width: 540px;
+  margin: 16px auto 0;
+}
+
+.page .card + .card {
+  margin-top: 22px;
+}
+
+.page .grid {
+  margin-top: 22px;
+}
+
+.page .grid .card {
+  height: 100%;
+}
+
+.link-card {
+  border-color: rgba(54, 92, 255, 0.22);
+  background:
+    radial-gradient(circle at top right, rgba(54, 92, 255, 0.08), transparent 18rem),
+    var(--card);
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  color: var(--muted);
+  line-height: 1.8;
+  list-style: none;
+}
+
+li {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #f7f8fc;
+  overflow-wrap: anywhere;
+}
+
+li + li {
+  margin-top: 8px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
 @media (max-width: 780px) {
+  nav {
+    flex-wrap: wrap;
+    max-width: 100%;
+    border-radius: 24px;
+  }
+
+  nav a {
+    padding: 8px 12px;
+  }
+
   .hero-content {
     margin-top: 80px;
   }
@@ -152,58 +300,8 @@ h1 {
   .grid {
     grid-template-columns: 1fr;
   }
-}
 
-.page {
-  padding-top: 24px;
-  padding-bottom: 56px;
-}
-
-.page nav {
-  margin-bottom: 28px;
-}
-
-.page .card + .card {
-  margin-top: 20px;
-}
-
-.two {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-ul {
-  margin: 0;
-  padding-left: 1.2rem;
-  color: var(--muted);
-  line-height: 1.8;
-}
-
-li + li {
-  margin-top: 6px;
-}
-
-.card a {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.link-card {
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(54, 92, 255, 0.08),
-      transparent 18rem
-    ),
-    var(--card);
-}
-
-@media (max-width: 780px) {
-  nav {
-    flex-wrap: wrap;
-    gap: 14px;
-  }
-
-  .two {
-    grid-template-columns: 1fr;
+  .page > .card:first-of-type {
+    padding: 32px;
   }
 }
